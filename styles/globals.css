@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Poppins&family=Raleway&display=swap");
+
+:root {
+  --headerFont: "Poppins", sans-serif;
+  --bodyFont: "Raleway", sans-serif;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -13,4 +19,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headerFont);
+}
+
+p {
+  font-family: var(--bodyFont);
 }

@@ -3,13 +3,25 @@
 :root {
   --headerFont: "Poppins", sans-serif;
   --bodyFont: "Raleway", sans-serif;
+  --serifFont: "Bitter", serif;
+}
+
+html {
+  height: 100%;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--bodyFont), var(--headerFont), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: palegoldenrod;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -28,8 +40,37 @@ h4,
 h5,
 h6 {
   font-family: var(--headerFont);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.headline {
+  font-family: var(--serifFont);
+}
+
+.headline__background {
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 0, 0.8);
 }
 
 p {
   font-family: var(--bodyFont);
+  line-height: 1.6;
+}
+
+.lead {
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.white {
+  color: #fff;
+}
+
+.capitalize {
+  text-transform: uppercase;
 }

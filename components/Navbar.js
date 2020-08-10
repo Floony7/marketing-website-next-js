@@ -1,22 +1,39 @@
 import Link from "next/link"
+import { device } from "../styled/device"
 import styled from "styled-components"
 
 const Nav = styled.nav`
-  width: 60%;
+  width: 90%;
   display: flex;
+  /* flex-basis: 100%; */
   justify-content: space-evenly;
+  @media ${device.mobileL} {
+    width: 40%;
+  }
 `
 
 const SiteLogo = styled.h1`
+  width: 90%;
+  /* flex-basis: 100%; */
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 0;
+  margin: 0 auto;
+  @media ${device.mobileL} {
+    width: 40%;
+  }
 `
 
 const NavbarInner = styled.div`
   display: flex;
   padding: 5px;
-  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media ${device.mobileL} {
+    justify-content: space-between;
+    align-items: center;
+  }
 `
 
 const Navbar = (props) => {

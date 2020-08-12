@@ -1,11 +1,12 @@
 import Layout from "../components/Layout"
 import Wrapper from "../styled/Wrapper"
+import PageTitle from "../components/PageTitle"
 
 const Component = (props) => {
   return (
     <Layout title="About">
       <Wrapper>
-        <h1>About us</h1>
+        <h1>About Best Web Themes</h1>
         <p className="lead">This is some dope content y'all</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quis modi saepe dicta harum a, expedita recusandae delectus quibusdam sint facilis perspiciatis dolorum! Obcaecati hic molestias officiis facilis iure dolores.</p>
         <p>Voluptatem mollitia ea ducimus harum accusantium, quisquam fuga molestias tenetur modi dolorem libero eveniet aut perferendis, perspiciatis voluptatibus adipisci ullam fugiat amet repellat suscipit nulla atque. Libero provident neque velit.</p>

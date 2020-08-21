@@ -38,14 +38,16 @@ export default function Home() {
     <>
       <Layout title="Best Web Themes | Home">
         <Hero />
-
         <Grid>
           <Main>
             <InnerDiv>
               <Block>
                 <h1>Finding the best website WordPress theme made easy</h1>
                 <p className="lead">Finding a WordPress theme that works for your site can take time. Let us help!</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magnam totam, vitae nulla autem nemo consequatur corrupti asperiores earum numquam inventore ab maxime, nihil qui aliquam consectetur! Quas, at voluptates.Impedit, omnis. Amet ullam mollitia ipsum aperiam, aliquid, debitis quidem id eos explicabo sapiente possimus molestias. Similique magnam debitis maiores beatae optio? Illo, non sequi modi error dolore ipsam a.</p>
+                <p>Ecommerce, blogging, studio, agency, magazine... There are a multitude of website design needs in 2020. Most of us aren't developers and want to be able to customise our sites in ways that sells our vision and identity. </p>
+                <p>So off to a theme store you go, only to find the selection is so large that you don't have time to go through 100s of themes to find the best one for you.</p>
+                <p>That's where we come in! Take advantage of our experience as both WordPress developers and users to find the themes in each category that are the best and easiest to use.</p>
+                <p>Not a WordPress user? Great! We have also hand picked HTML templates from across the web that you can slot into your site and get it running fast.</p>
               </Block>
             </InnerDiv>
           </Main>

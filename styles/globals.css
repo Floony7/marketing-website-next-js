@@ -44,6 +44,14 @@ h6 {
   line-height: 1;
 }
 
+h1 {
+  font-size: 2em !important;
+}
+
+.light {
+  font-weight: 300;
+}
+
 .headline {
   font-family: var(--serifFont);
 }
@@ -54,13 +62,14 @@ h6 {
 }
 
 p {
-  font-family: var(--bodyFont);
-  line-height: 1.6;
+  font-family: var(--headerFont);
+  line-height: 1.7;
 }
 
 .lead {
   font-size: 1.375rem;
   line-height: 1.2;
+  font-family: var(--bodyFont);
 }
 
 .align-center {
@@ -73,4 +82,8 @@ p {
 
 .capitalize {
   text-transform: uppercase;
+}
+
+nav > a {
+  font-family: var(--headerFont);
 }

@@ -12,12 +12,13 @@ const Nav = styled.nav`
   }
 `
 
-const SiteLogo = styled.h1`
+const SiteLogo = styled.span`
   width: 90%;
-  /* flex-basis: 100%; */
+  /* flex-basis: 100%;
   font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 auto;
+  font-weight: 700;*/
+  margin-top: 0;
+  margin-bottom: 0;
   @media ${device.mobileL} {
     width: 40%;
   }
@@ -39,7 +40,9 @@ const NavbarInner = styled.div`
 const Navbar = (props) => {
   return (
     <NavbarInner>
-      <SiteLogo>Best Web Themes</SiteLogo>
+      <SiteLogo>
+        <img src="/static/logo.png" alt="Best Web Themes site logo. " />
+      </SiteLogo>
       <Nav>
         <Link href="/">
           <a>Home</a>
@@ -47,8 +50,11 @@ const Navbar = (props) => {
         <Link href="/about">
           <a>About</a>
         </Link>
-        <Link href="/contact">
-          <a>Contact</a>
+        <Link href="/premium">
+          <a>Premium themes</a>
+        </Link>
+        <Link href="/blog">
+          <a>Blog</a>
         </Link>
       </Nav>
     </NavbarInner>

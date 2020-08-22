@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { device } from "../styled/device"
 import styled from "styled-components"
+import { useRouter } from "next/router"
 
 const Nav = styled.nav`
   width: 90%;
@@ -14,6 +15,7 @@ const Nav = styled.nav`
 
 const SiteLogo = styled.span`
   width: 90%;
+  cursor: pointer;
   /* flex-basis: 100%;
   font-size: 1.5rem;
   font-weight: 700;*/
@@ -38,23 +40,28 @@ const NavbarInner = styled.div`
 `
 
 const Navbar = (props) => {
+  const router = useRouter()
+  const { pathname } = router
+
   return (
     <NavbarInner>
       <SiteLogo>
-        <img src="/static/logo.png" alt="Best Web Themes site logo. " />
+        <Link href="/">
+          <img src="/static/logo.png" alt="Best Web Themes site logo. " />
+        </Link>
       </SiteLogo>
       <Nav>
         <Link href="/">
-          <a>Home</a>
+          <a className={`nice-link ${pathname === "/" ? "active" : ""}`}>Home</a>
         </Link>
         <Link href="/about">
-          <a>About</a>
+          <a className={`nice-link ${pathname === "/about" ? "active" : ""}`}>About</a>
         </Link>
         <Link href="/premium">
-          <a>Premium themes</a>
+          <a className={`nice-link ${pathname === "/premium" ? "active" : ""}`}>Premium themes</a>
         </Link>
         <Link href="/blog">
-          <a>Blog</a>
+          <a className={`nice-link ${pathname === "/blog" ? "active" : ""}`}>Blog</a>
         </Link>
       </Nav>
     </NavbarInner>

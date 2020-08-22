@@ -5,6 +5,7 @@ const Sidebar = styled.aside`
   grid-column: 1 / span 13;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0.5em;
+  margin-top: 0.5em;
 
   @media ${device.mobileL} {
     grid-column: 9 / span 4;

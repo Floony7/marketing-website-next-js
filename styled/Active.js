@@ -15,8 +15,10 @@ export default ActiveLink = ({ children, href }) => {
   }
 
   return (
-    <a href={href} onClick={handleClick} style={style}>
-      {children}
-    </a>
+    <Link href={href}>
+      <a onClick={handleClick} style={style}>
+        {children}
+      </a>
+    </Link>
   )
 }

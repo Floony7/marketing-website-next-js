@@ -3,7 +3,7 @@ import Wrapper from "../styled/Wrapper"
 
 const Premium = (props) => {
   return (
-    <Layout title="Premium themes">
+    <Layout title="Premium WordPress Themes">
       <Wrapper>
         <h1>Premium themes</h1>
         <p className="lead">This is some dope content y'all</p>

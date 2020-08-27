@@ -5,6 +5,7 @@ import Grid from "../components/Grid"
 import Wrapper from "../styled/Wrapper"
 import { device } from "../styled/device"
 import styled from "styled-components"
+import fs from "fs"
 
 const Main = styled.section`
   grid-column: 1 / span 13;
@@ -35,7 +36,7 @@ const Blog = (props) => {
             </Inner>
             <ArticleSummary>
               <Inner>
-                <h2>New article that is awesome</h2>
+                <h2>story</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nemo quia incidunt voluptate tempore aliquam blanditiis, aspernatur illo cumque odio architecto dignissimos et officia eaque unde culpa rem necessitatibus nobis.</p>
               </Inner>
             </ArticleSummary>
@@ -52,7 +53,7 @@ const Blog = (props) => {
               </Inner>
             </ArticleSummary>
           </Main>
-          <PostSidebar />
+          <PostSidebar posts={props.posts} />
         </Grid>
       </Wrapper>
     </Layout>
@@ -60,3 +61,14 @@ const Blog = (props) => {
 }
 
 export default Blog
+
+export function getStaticProps() {
+  const data = fs.readFileSync(`${process.cwd()}/data/blogroll.json`)
+  const posts = JSON.parse(data)
+
+  return {
+    props: {
+      posts: posts,
+    },
+  }
+}

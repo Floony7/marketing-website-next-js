@@ -7,6 +7,8 @@ import Grid from "../components/Grid"
 import styles from "../styles/Home.module.css"
 import styled from "styled-components"
 import { device } from "../styled/device"
+import { SidebarItem, SidebarItemBody } from "../styled/Blogroll"
+import fs from "fs"
 
 const Main = styled.main`
   grid-column: 1 / 13;
@@ -33,7 +35,8 @@ const Block = styled.div`
   padding: 0.5em;
 `
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props.posts)
   return (
     <>
       <Layout title="Best Web Themes | Home">
@@ -55,7 +58,14 @@ export default function Home() {
             <InnerDiv>
               <Block>
                 <h3>Lorem rulz yo</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae porro rem eius quisquam, sit labore dicta, iste cupiditate at non earum ullam itaque autem, libero quidem quibusdam nemo dolorem corrupti?</p>
+                {props.posts.map((post) => (
+                  <SidebarItem>
+                    <SidebarItemBody>
+                      <h4>{post.name}</h4>
+                      <p>{post.description}</p>
+                    </SidebarItemBody>
+                  </SidebarItem>
+                ))}
               </Block>
             </InnerDiv>
           </Sidebar>
@@ -63,4 +73,15 @@ export default function Home() {
       </Layout>
     </>
   )
+}
+
+export function getStaticProps() {
+  const data = fs.readFileSync(`${process.cwd()}/data/blogroll.json`)
+  const posts = JSON.parse(data)
+
+  return {
+    props: {
+      posts: posts,
+    },
+  }
 }

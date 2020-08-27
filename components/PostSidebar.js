@@ -1,5 +1,6 @@
 import { device } from "../styled/device"
 import styled from "styled-components"
+import { SidebarItem, SidebarItemBody } from "../styled/Blogroll"
 
 const Sidebar = styled.aside`
   grid-column: 1 / span 13;
@@ -26,37 +27,19 @@ const Sidebar = styled.aside`
   }
 `
 
-const SidebarItem = styled.div`
-  width: 100%;
-  padding: 2px;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #ccc;
-`
-
-const SidebarItemBody = styled.div`
-  p {
-    margin-top: 0;
-    font-size: 0.8rem;
-    line-height: 1.3;
-  }
-`
-
 const PostSidebar = (props) => {
+  console.log(props)
   return (
     <Sidebar>
       <h3>Recent Posts</h3>
-      <SidebarItem>
-        <SidebarItemBody>
-          <h4>Sidebar item 1</h4>
-          <p>Count thy ways in which we can find a premium theme.</p>
-        </SidebarItemBody>
-      </SidebarItem>
-      <SidebarItem>
-        <SidebarItemBody>
-          <h4>Sidebar item 2</h4>
-          <p>Count thy ways in which we can find a premium theme.</p>
-        </SidebarItemBody>
-      </SidebarItem>
+      {props.posts.map((post) => (
+        <SidebarItem>
+          <SidebarItemBody>
+            <h4>{post.name}</h4>
+            <p>{post.description}</p>
+          </SidebarItemBody>
+        </SidebarItem>
+      ))}
     </Sidebar>
   )
 }
